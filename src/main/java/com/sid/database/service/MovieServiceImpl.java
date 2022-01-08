@@ -63,4 +63,14 @@ public class MovieServiceImpl implements IMovieService{
             }
         }
     }
+
+    @Override
+    public void deleteMovieById(Integer movieId) {
+        movieRepo.deleteById(movieId);
+    }
+
+    @Override
+    public List<Movie> getAllMovies() {
+        return (List<Movie>) movieRepo.findAll();
+    }
 }

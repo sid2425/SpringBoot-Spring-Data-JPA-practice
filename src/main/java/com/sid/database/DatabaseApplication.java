@@ -17,7 +17,7 @@ public class DatabaseApplication {
     public ApplicationRunner doWork() {
         return args -> {
             try {
-                movieService.getAllMovies(3);
+                movieService.getAllMovies().forEach(System.out::println);
             }
             catch (Exception e) {
                 e.printStackTrace();

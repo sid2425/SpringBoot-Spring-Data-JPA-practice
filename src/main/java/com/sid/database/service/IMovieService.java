@@ -11,4 +11,6 @@ public interface IMovieService {
     List<Movie> getAllMovies(boolean inAsc, String ...properties);
     List<Movie> getPaginatedMovies(int pageNo, int pageSize);
     void getAllMovies(int pageSize);
+    void deleteMovieById(Integer movieId);
+    List<Movie> getAllMovies();
 }
