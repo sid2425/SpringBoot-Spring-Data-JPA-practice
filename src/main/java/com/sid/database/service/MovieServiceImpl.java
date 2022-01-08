@@ -73,4 +73,16 @@ public class MovieServiceImpl implements IMovieService{
     public List<Movie> getAllMovies() {
         return (List<Movie>) movieRepo.findAll();
     }
+
+    @Override
+    public List<Movie> getMovieByName(String movieName) {
+        return movieRepo.findByMovieNameEquals(movieName);
+    }
+
+    @Override
+    public List<Movie> getMovieByPattern(String pattern) {
+        return movieRepo.findByMovieNameLike(pattern);
+    }
+
+
 }

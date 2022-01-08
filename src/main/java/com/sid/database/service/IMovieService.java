@@ -13,4 +13,7 @@ public interface IMovieService {
     void getAllMovies(int pageSize);
     void deleteMovieById(Integer movieId);
     List<Movie> getAllMovies();
+    List<Movie> getMovieByName(String movieName);
+    List<Movie> getMovieByPattern(String pattern);
+
 }
